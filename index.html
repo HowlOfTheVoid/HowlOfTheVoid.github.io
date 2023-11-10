@@ -1,36 +1,83 @@
 <!DOCTYPE html>
 <html lang="en" style>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ethan Graupmann's Portfolio - Github Pages</title>
     <style>
-        *{
-            box-sizing: border-box;
+        body{
+            margin: 0;
+            font-family: Arial, Arial, Helvetica, sans-serif, sans-serif;
         }
-        .HeaderBanner{
-            position: fixed;
-            top: 20px;
-            border: 2px solid;
+        /* Background Color to the Top Navigation Bar.*/
+        .topNav{
+            background-color: #333;
+            overflow: hidden;
         }
-        .BorderBottomZero{
-            border-bottom: 0;
+        /* Style of the links inside the Navigation Bar.*/
+        .topNav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
         }
-        h1 h2 h3 h4 h5 h6{
-            margin-top: 0;
-            margin-bottom: 0;
+        /* Style of the links when the mouse is hovering over.*/
+        .topNav a:hover{
+            background-color: #ddd;
+            color: black;
         }
-        div{
-            display: block;
+        /* Style of the links when they are the active tab.*/
+        .topNav a.active{
+            background-color: #04AA6D;
+            color: white;
+        }
+        .contentTab.active{
+            display:block;
+        }
+        .contentTab{
+            display:none;
         }
     </style>
 </head>
 <body>
     <div id="Page">
-        <div data-container="header" class="HeaderBanner">
-            <h1>Hello World</h1>
+        <div class="topNav">
+            <a class="topNavButton active" onclick="openTab(event, 'Home')" href="#Home">Home</a>
+            <a class="topNavButton" onclick="openTab(event, 'SoftwareDev')" href="#SoftwareDev">Software Development</a>
+            <a class="topNavButton" onclick="openTab(event, 'GameDev')" href="#GameDev">Game Development</a>
+            <a class="topNavButton" onclick="openTab(event, 'About')" href="#About">About</a>
         </div>
-        <div>
-            <p>I'm hosted with GitHub Pages.</p>
+        <div class="contentPage" id="content">
+            <div class="contentTab active" id="Home">
+                <p>I'm hosted with GitHub Pages.</p>
+                <p>And i can code it myself!</p>
+            </div>
+            <div class="contentTab" id="SoftwareDev">
+                <p>And I can make the pages Switch!</p>
+            </div>
+            <div class="contentTab" id="GameDev">
+                <p>I also develop games-</p>
+            </div>
+            <div class="contentTab" id="About">
+                <p>And I graduated from the University of Denver.</p>
+            </div>
         </div>
     </div>
+    <script>
+        function openTab(evt, tabDesignation) {
+            var i, contentTabs, navButtons;
+            contentTabs = document.getElementsByClassName("contentTab");
+            for (i = 0; i < contentTabs.length; i++) {
+                contentTabs[i].className = contentTabs[i].className.replace(" active", "");
+            }
+            document.getElementById(tabDesignation).className += " active";
+            navButtons = document.getElementsByClassName("topNavButton");
+            for (i = 0; i < navButtons.length; i++) {
+                navButtons[i].className = navButtons[i].className.replace(" active", "");
+            }
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 </html>
