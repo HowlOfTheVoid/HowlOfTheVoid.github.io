@@ -47,28 +47,76 @@
         .contentTab{
             display:none;
         }
+        .aboutContent:before, .aboutContent:after{
+            content: "";
+            display: table;
+        }
+        .aboutContent:after {
+            clear: both;
+        }
+        .aboutContent{
+            clear: both;
+            *zoom: 1;
+        }
+        .aboutContent img{
+            float: left;
+            width: 200px;
+            z-index: -9;
+            margin-left: 20px
+        }
+        .aboutContent text{
+            float:right;
+        }
+        .aboutContent h2{
+            margin-left: 240px;
+        }
+        .aboutContent p{
+            clear:right;
+            margin-left: 230px;
+        }
+        .contactContent a {
+            margin-left: 50px;
+            margin-right: 10px;
+            text-indent: 40px;
+        }
     </style>
 </head>
 <body>
     <div id="Page">
         <div class="topNav">
-            <a class="topNavButton active" onclick="openTab(event, 'Home')" href="#Home">Home</a>
+            <a class="topNavButton active" onclick="openTab(event, 'About')" href="#About">About</a>
             <a class="topNavButton" onclick="openTab(event, 'SoftwareDev')" href="#SoftwareDev">Software Development</a>
             <a class="topNavButton" onclick="openTab(event, 'GameDev')" href="#GameDev">Game Development</a>
-            <a class="topNavButton" onclick="openTab(event, 'About')" href="#About">About</a>
         </div>
         <div class="contentPage" id="content">
-            <div class="contentTab active" id="Home">
-                <img src="https://HowlOfTheVoid.github.io/content/EthanGraupmannPortrait.jpg" />
-                <h2>About</h2>
-                <p>Hello! My name is Ethan Graupmann. I'm a software and game developer based in Colorado. I have a bunch of personal projects ranging from 
-                big RPG games to smaller mods for games I enjoy. I also continue to develop my skills in Python, Java, C# and C++, and front-end development.</p>
-                <p>When I'm not focused on my passions in coding and development, I'm often spending time with my family in Colorado, or working as a Lifeguard
-                in-state.</p>
-                <p>My passion comes from telling stories and achievement. Software Development is a process- And in that process, I find a satisfaction in 
-                learning and growing- Moreover, the sensation of completing a project or feature is one of great satisfaction for me! Game Development and
-                design is another passion of mine- I see game design as the art of telling stories and creating art in a medium that allows the audience to 
-                interact directly with it, and RPGs in particular give the audience a new perspective, through the eyes of the characters.</p>
+            <div class="contentTab active" id="About">
+                <div class="aboutContent">
+                    <img src="https://HowlOfTheVoid.github.io/content/EthanGraupmannPortrait.jpg" />
+                    <div class="text">
+                        <h2>About</h2>
+                        <p>
+                            Hello! My name is Ethan Graupmann. I'm a software and game developer based in Colorado. I have a bunch of personal projects ranging from
+                            big RPG games to smaller mods for games I enjoy. I also continue to develop my skills in Python, Java, C# and C++, and front-end development.
+                        </p>
+                        <p>
+                            When I'm not focused on my passions in coding and development, I'm often spending time with my family in Colorado, or working as a Lifeguard
+                            in-state.
+                        </p>
+                        <p>
+                            My passion comes from telling stories and achievement. Software Development is a process- And in that process, I find a satisfaction in
+                            learning and growing- Moreover, the sensation of completing a project or feature is one of great satisfaction for me! Game Development and
+                            design is another passion of mine- I see game design as the art of telling stories and creating art in a medium that allows the audience to
+                            interact directly with it, and RPGs in particular give the audience a new perspective, through the eyes of the characters.
+                        </p>
+                        <p></p>
+                    </div>
+                </div>
+                <br />
+                <div class="contactContent">
+                    <h2>Contact Information</h2>
+                    <p>Email: ehgraupmann@gmail.com</p>
+                    <a href="https://www.linkedin.com/in/ethan-graupmann-3ba158222/">Check me out on LinkedIn!</a>
+                </div>
             </div>
             <div class="contentTab" id="SoftwareDev">
                 <p>And I can make the pages Switch!</p>
