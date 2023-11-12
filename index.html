@@ -55,6 +55,7 @@
             clear: both;
         }
         .aboutContent{
+            margin-top: 15px;
             clear: both;
             *zoom: 1;
         }
@@ -78,6 +79,34 @@
             margin-left: 50px;
             margin-right: 10px;
             text-indent: 40px;
+        }
+        .projectCard:before, .projectCard:after{
+            content: "";
+            display: table;
+        }
+        .projectCard:after {
+            clear: both;
+        }
+        .projectCard {
+            clear: both;
+            background-color: darkblue;
+            color: white;
+        }
+        .projectCard img{
+            float: left;
+            width: 200px;
+            z-index: -9;
+            margin-left: 20px;
+        }
+        .projectCard text{
+            float:right;
+        }
+        .projectCard h2{
+            margin-left: 240px;
+        }
+        .projectCard p{
+            clear:right;
+            margin-left: 230px;
         }
     </style>
 </head>
@@ -122,10 +151,25 @@
                 <p>And I can make the pages Switch!</p>
             </div>
             <div class="contentTab" id="GameDev">
-                <p>I also develop games-</p>
-            </div>
-            <div class="contentTab" id="About">
-                <p>And I graduated from the University of Denver.</p>
+                <h2>Game Development</h2>
+                <p>
+                    Much of my game development experience comes from personal projects that I am continuously improving on - From full, standalone games to mods
+                    that build off of existing games. I enjoy dipping my hands into all aspects of game design- From art, to coding, to balancing and worldbuilding!
+                    These are a couple of examples of my work in game development and design;
+                </p>
+                <div class="projectCard">
+                    <img src="https://HowlOfTheVoid.github.io/content/AcidAndSteel.png"/>
+                    <h2>Of Acid and Steel</h2>
+                    <p>
+                        My largest (And still undergoing) personal project, this is a Turn-Based, Fantasy RPG created using RPG Maker. Although the game itself is
+                        created mainly using the events in the engine, I've had to develop several script-based events and use a few add-ons as well! The coding is
+                        done in JavaScript, and all of the work in this game is my own- Art, Character development, Combat, and More!
+                    </p>
+                    <p>
+                        I have a personal goal to make this game all on my own, no matter how long it takes- And I plan on getting into every part of it, from music
+                        to animation. During the fist few months of working on the beginning, I've gotten over 50 downloads in it!
+                    </p>
+                </div>
             </div>
         </div>
     </div>
