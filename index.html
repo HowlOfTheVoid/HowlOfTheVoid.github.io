@@ -56,7 +56,7 @@
             display: flex;
             align-items: center;
         }
-        .aboutContent .img-left{
+        .aboutContent img{
             width: 18%;
             margin: 1% 1% 1% 1%;
         }
@@ -67,49 +67,32 @@
             text-indent: 40px;
         }
 
-        .projectCard:before, .projectCard:after {
-            content: "";
-            display: table;
-        }
-
-        .projectCard:after {
-            clear: both;
-        }
-
         .projectCard {
-            clear: both;
+            display: flex;
             background-color: darkblue;
+            align-items: center;
             border: 10px solid white;
             color: white;
         }
 
-        .img-left {
-            float: left;
+        .projectCard img {
             width: 18%;
-            z-index: -9;
             margin: 1% 1% 1% 1%;
         }
 
-        .img-right {
-            float: right;
-            width: 18%;
-            z-index: -9;
-            margin: 1% 1% 1% 1%;
+        .floatRight {
+            float:right;
         }
-
+        .floatLeft {
+            float:left;
+        }
         .projectCard text {
-            float: right;
             width: 78%;
             margin: 1% 1% 1% 1%;
         }
 
         .projectCard h2 {
             margin-left: 2.5%;
-        }
-
-        .projectCard p {
-            clear: right;
-            margin-left: 230px;
         }
 
         .wrapper {
@@ -132,8 +115,8 @@
         <div class="contentPage" id="content">
             <div class="contentTab active" id="About">
                 <div class="aboutContent wrapper">
-                    <img class="img-left" src="https://HowlOfTheVoid.github.io/content/EthanGraupmannPortrait.jpg" />
-                    <div class="text">
+                    <img class="floatLeft" src="https://HowlOfTheVoid.github.io/content/EthanGraupmannPortrait.jpg" />
+                    <div class="text floatRight">
                         <h2>About</h2>
                         <p>
                             Hello! My name is Ethan Graupmann. I'm a software and game developer based in Colorado. I have a bunch of personal projects ranging from
@@ -172,17 +155,35 @@
                     </p>
                 </div>
                 <div class="projectCard wrapper">
-                    <img class="img-left" src="https://HowlOfTheVoid.github.io/content/AcidAndSteel.png"/>
-                    <h2>Of Acid and Steel</h2>
-                    <p>
-                        My largest (And still undergoing) personal project, this is a Turn-Based, Fantasy RPG created using RPG Maker. Although the game itself is
-                        created mainly using the events in the engine, I've had to develop several script-based events and use a few add-ons as well! The coding is
-                        done in JavaScript, and all of the work in this game is my own- Art, Character development, Combat, and More!
-                    </p>
-                    <p>
-                        I have a personal goal to make this game all on my own, no matter how long it takes- And I plan on getting into every part of it, from music
-                        to animation. During the fist few months of working on the beginning, I've gotten over 50 downloads in it!
-                    </p>
+                    <img class="floatLeft" src="https://HowlOfTheVoid.github.io/content/AcidAndSteel.png"/>
+                    <div class="floatRight">
+                        <h2>Of Acid and Steel</h2>
+                        <p>
+                            My largest (And still undergoing) personal project, this is a Turn-Based, Fantasy RPG created using RPG Maker. Although the game itself is
+                            created mainly using the events in the engine, I've had to develop several script-based events and use a few add-ons as well! The coding is
+                            done in JavaScript, and all of the work in this game is my own- Art, Character development, Combat, and More!
+                        </p>
+                        <p>
+                            I have a personal goal to make this game all on my own, no matter how long it takes- And I plan on getting into every part of it, from music
+                            to animation. During the fist few months of working on the beginning, I've gotten over 50 downloads in it!
+                        </p>
+                    </div>
+                </div>
+                <div class="projectCard wrapper">
+                    <div class="floatLeft">
+                        <h2>Ryophi Species Mod (Starbound)</h2>
+                        <p>
+                            I've created a unique species mod for the game Starbound (A Terraria-Style game in a Sci-Fi setting), snake-like humanoids called the Ryophi.
+                            The mod for Starbound is public on the Steam Workshop, and has over 400 users! Starbound, and by extension the mod, is written in JavaScript,
+                            and uses JSON objects.
+                        </p>
+                        <p>
+                            While some of the mod's work was in sprites, I've also programmed the species to be unique- A larger hitbox, unique particles around their
+                            models, and unique text for item descriptions! The Ryophi are also planned to be more fleshed-out lore-wise in the future, as I've created
+                            a page on Toyhouse for them.
+                        </p>
+                    </div>
+                    <img class="floatRight" src="https://HowlOfTheVoid.github.io/content/RyophiMod.png" />
                 </div>
             </div>
         </div>
