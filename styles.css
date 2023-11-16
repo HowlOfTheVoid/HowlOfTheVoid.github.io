@@ -67,9 +67,9 @@ h2 {
     display: flex;
     background-color: rgb(55,55,255);
     align-items: center;
-    border: 10px solid white;
     color: white;
-    border-radius: 10px 30px 50px 30px;
+    border-radius: 5px 30px 50px 30px;
+    border: 21px solid white;
     justify-content:space-between;
 }
 
@@ -100,11 +100,18 @@ h2 {
 }
 
 .projectCard text {
+    min-width: 85%;
     margin: 1% 1% 1% 1%;
 }
 
 .projectCard h2 {
     margin-left: 2.5%;
+}
+
+.projectCard legend{
+    background-color:inherit;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .wrapper {
@@ -115,4 +122,9 @@ h2 {
 
 .wrapper img {
     min-width: 200px;
+}
+
+.textSize32 {
+    font-size: 32px;
+    font-weight: 200;
 }
