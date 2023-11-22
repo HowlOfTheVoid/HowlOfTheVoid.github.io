@@ -63,13 +63,15 @@ h2 {
     text-indent: 40px;
 }
 
+/* Flex container - To hold multiple elements adjacent to one another. */
 .projectCard {
     display: flex;
-    background-color: rgb(55,55,255);
+    background-color: rgb(90,90,255);
     align-items: center;
     color: white;
     border-radius: 5px 30px 50px 30px;
-    border: 21px solid white;
+    margin-top: 20px;
+    margin-bottom: 20px;
     justify-content:space-between;
 }
 
@@ -108,6 +110,7 @@ h2 {
     margin-left: 2.5%;
 }
 
+/* Makes the legend appear part of the card, and makes it rounded to look nice. */
 .projectCard legend{
     background-color:inherit;
     padding: 5px;
@@ -115,7 +118,8 @@ h2 {
 }
 
 .wrapper {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     align-items: center;
     max-width: 60rem;
 }
@@ -127,4 +131,10 @@ h2 {
 .textSize32 {
     font-size: 32px;
     font-weight: 200;
+}
+
+@media (max-width: 66rem){
+    .projectCard{
+        margin: 20px!important;
+    }
 }
